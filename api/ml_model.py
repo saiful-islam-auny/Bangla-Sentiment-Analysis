@@ -5,6 +5,8 @@ import pickle
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from nltk.corpus import stopwords
+import nltk
+nltk.download('stopwords')
 
 # Get the absolute path to the model and tokenizer files
 current_dir = os.path.dirname(os.path.abspath(__file__))
