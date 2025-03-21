@@ -1,0 +1,186 @@
+/* Ensure full height for the page */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #B0BEC5;
+}
+
+/* Make main content flexible to push footer down */
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: rgba(38, 50, 56, 0.8); /* Semi-transparent dark color */
+    color: #F0F4F8;
+    z-index: 10;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px); /* Soft Blur Effect */
+}
+
+/* Footer Styling */
+.footer {
+    background: rgba(38, 50, 56, 0.8); /* Semi-transparent dark color */
+    color: #F0F4F8;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    z-index: 10;
+    backdrop-filter: blur(3px);
+}
+
+.footer .social-links a {
+    color: #90A4AE; /* Light grayish blue */
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.footer .social-links a:hover {
+    color: #F0F4F8;
+}
+
+
+/* Background Text Styling */
+.background-text {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Individual Bangla Alphabets */
+.background-text span {
+    position: absolute;
+    font-size: calc(15px + 3vw); /* Different sizes */
+    color: rgba(21, 29, 32, 0.3);
+    font-weight: bold;
+    transform: rotate(var(--rotate));
+    white-space: nowrap;
+}
+
+
+/* Centered Box */
+.search-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* Enlarged Search Box */
+.search-box {
+    background: #37474F; /* Dark Gray */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 500px; /* Increased Width */
+}
+
+/* Search Input */
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    color: #263238;
+}
+
+/* Placeholder Text */
+.search-box input::placeholder {
+    color: #90A4AE; /* Light Gray */
+}
+
+/* Check Button */
+.search-box button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    background: #546E7A; /* Slightly Lighter Gray */
+    color: #F0F4F8;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.search-box button:hover {
+    background: #455A64;
+}
+
+/* Instruction Section */
+.instruction {
+    margin-top: 15px;
+    text-align: left;
+    color: #9ea7aa; /* Light Gray */
+    font-size: 16px;
+}
+
+.instruction ul {
+    padding-left: 20px;
+}
+
+.instruction li {
+    margin-bottom: 5px;
+}
+
+/* General styles for the language selector */
+.language-selector {
+    background: #B0BEC5;
+    color: #263238;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 576px) {
+    .language-selector {
+      font-size: 18px;  /* Increase font size for better readability */
+      padding: 10px 15px;  /* Increase padding for a larger click/tap area */
+      width: 100%;  /* Ensure it takes full width on small screens */
+    }
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 577px) {
+    .language-selector {
+      width: auto;  /* Keep the width to auto on larger screens */
+    }
+  }
+  
+  /* Hover and transition effects */
+  .language-selector:hover {
+    background: #90A4AE;
+    transform: scale(1.05);
+  }
+  
+  .language-selector:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(38, 50, 56, 0.3);
+  }
+  
